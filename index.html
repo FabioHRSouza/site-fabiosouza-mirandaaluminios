@@ -22,7 +22,22 @@
     }
     body {
       padding-bottom: 60px; /* espaço para o rodapé fixo */
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
+    /* Navbar fixa no topo */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px; /* ajuste conforme o tamanho real da navbar */
+    background: #fff; /* cor de fundo para evitar sobreposição */
+    z-index: 1000;
+  }
   </style>
 </head>
 <body>
@@ -77,7 +92,17 @@
 <!-- Catálogos -->
 <section id="catalogos" class="container mt-5">
   <h2>Catálogos</h2>
-  <p>Links para catálogos...</p>
+  <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Barras Chatas</a>
+  <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Cantoneiras</a>
+  <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Perfis "U"</a>
+  <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Perfis "T"</a>
+  <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Tubos Quadrados</a>
+  <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Tubos Redondos</a>
+  <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Tubos Retangulares</a>
+  <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Redondos Maciços</a>
+  <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Quadrados Maciços</a>
+  <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Sextavados Maciços</a>
+  
 </section>
 
 <!-- Contato -->
@@ -98,7 +123,7 @@
 
   <!-- Mapa -->
   <div class="mt-3">
-    <a href="https://share.google/HhPkmmgG6EtV65CVe" target="_blank">
+    <a href="https://maps.app.goo.gl/xRah9cs7cqqm6tmn8">
       <img src="https://maps.googleapis.com/maps/api/staticmap?center=-27.5969,-48.5495&zoom=15&size=600x300&markers=color:red|-27.5969,-48.5495&key=SUA_API_KEY" 
            alt="Mapa" class="img-fluid rounded shadow">
     </a>
