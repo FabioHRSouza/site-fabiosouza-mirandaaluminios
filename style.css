@@ -1,0 +1,72 @@
+/* Ajustes gerais */
+body {
+  padding-top: 70px;  /* Espaço para a navbar fixa */
+  padding-bottom: 70px; /* Espaço para o rodapé fixo */
+  scroll-behavior: smooth; /* Scroll suave */
+}
+
+/* Navbar fixa */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Rodapé fixo */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Carrossel */
+.carousel-item img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+/* Sessão Sobre */
+#sobre p {
+  text-align: justify;
+}
+
+.imagem-dev img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile - Sobre */
+@media (max-width: 768px) {
+  #sobre .row {
+    flex-direction: column;
+  }
+
+  .imagem-dev img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+}
+
+/* Contato: formulário e informações */
+#contato .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#contato .col-md-6 {
+  flex: 1;
+}
+
+/* Mobile - Contato */
+@media (max-width: 768px) {
+  #contato .row {
+    flex-direction: column;
+  }
+}
