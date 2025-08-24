@@ -29,13 +29,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
     gap: 1.6rem;
-}
+  }
   img {
     display: block;
     max-width: 100%;
-}
+  }
+
   /* Navbar clara */
   .navbar-light-scrolled {
     background-color: #fff !important;
@@ -60,45 +60,36 @@
   }
   
   .imagem-inicio {
-  width: 90%; /* Define a largura do contêiner para 90% da tela */
-  margin: 0 auto; /* Centraliza o contêiner na página */
-  height: auto; /* Garante que o contêiner tenha altura automática */
-}
-
-.imagem-inicio img {
-  width: 100%; /* Faz a imagem ocupar 100% do contêiner */
-  height: auto; /* Mantém a proporção da imagem */
-  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
-  object-fit: cover; /* Garante que a imagem cubra todo o contêiner sem distorcer */
-  display: block; /* Remove espaços extras abaixo da imagem */
-}
-
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+  }
+  .imagem-inicio img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
   /*Lista de Links em 2 colunas */
   .duas-colunas {
-  column-count: 2;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-   }
-
-#sobre {
-  column-count: 2;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-}
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+  }
 
   /* Carrossel responsivo */
-.carousel-container {
-  max-width: 900px;
-  margin: auto;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.carousel-item img {
-  height: 400px;       /* altura fixa */
-  object-fit: cover;   /* corta proporcional */
-}
+  .carousel-container {
+    max-width: 900px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
 
   /* Rodapé fixo */
   footer {
@@ -109,6 +100,29 @@
     color: white;
     text-align: center;
     padding: 8px;
+  }
+
+  /* -------- Ajustes seção SOBRE -------- */
+  #sobre p {
+    text-align: justify;
+  }
+
+  .imagem-dev img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    #sobre .row {
+      flex-direction: column;
+    }
+    .imagem-dev img {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
   }
 </style>
 </head>
@@ -125,13 +139,13 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
         <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link" href="#catalogos">Catálogos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
         <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
       </ul>
       <div class="main-header-cta">
-<!--                <a href="/produtos" class="btn btn-white"><span><img src="./icons/paper.svg" alt="">Ver Catálogo</span></a>-->
-<!--                <a href="/contato" class="btn btn-primary"><span><img src="./icons/cart.svg" alt="">Faça sua Cotação</span></a>-->
-                <a href="https://wa.me/5548999440582" class="btn btn-primary" target="_blank"><span><img src="./icons/cart.svg" alt="">Faça sua Cotação</span></a>
+        <a href="https://wa.me/5548999440582" class="btn btn-primary" target="_blank">
+          <span><img src="./icons/cart.svg" alt="">Faça sua Cotação</span>
+        </a>
       </div>
     </div>
   </div>
@@ -140,34 +154,42 @@
 <!-- Inicio -->
 <section id="inicio" class="mt-3">
   <div class="imagem-inicio">
-  <img src="miranda-sc.jpg" alt="Foto da fachada da Miranda Aluminio Santa Catarina">
-</div>
+    <img src="miranda-sc.jpg" alt="Foto da fachada da Miranda Aluminio Santa Catarina">
+  </div>
 </section>
 
 <!-- Sobre -->
 <section id="sobre" class="container mt-5">
-  
-  <div class="texto-sobre">
-    <h2>Miranda Alumínio Santa Catarina - Comercial Industria</h2>
-      <p>A página da Miranda Alumínio Santa Catarina foi desenvolvida pelo Vendedor Fábio Souza, como uma ferramenta de suporte aos produtos comercializados, oferecendo informações e recursos para clientes e parceiros do segmento industrial. Integrante do Grupo LGM, que reúne diversas empresas ligadas ao ramo do alumínio, a Miranda Alumínio fortalece sua presença no mercado, sempre comprometida com qualidade e confiança.
-
-        Para a Miranda Alumínio, a satisfação dos nossos clientes sempre foi prioridade. Por isso, nesses últimos 27 anos, a inovação sempre esteve presente.
-
+  <div class="row align-items-center">
+    <!-- Texto -->
+    <div class="col-md-6 texto-sobre">
+      <h2>Miranda Alumínio Santa Catarina - Comercial Industria</h2>
+      <p>
+        A página da Miranda Alumínio Santa Catarina foi desenvolvida pelo Vendedor Fábio Souza, 
+        como uma ferramenta de suporte aos produtos comercializados, oferecendo informações e 
+        recursos para clientes e parceiros do segmento industrial. Integrante do Grupo LGM, que 
+        reúne diversas empresas ligadas ao ramo do alumínio, a Miranda Alumínio fortalece sua 
+        presença no mercado, sempre comprometida com qualidade e confiança.
+        <br><br>
+        Para a Miranda Alumínio, a satisfação dos nossos clientes sempre foi prioridade. 
+        Por isso, nesses últimos 27 anos, a inovação sempre esteve presente.
+        <br><br>
         A Miranda Alumínio vive um novo momento! Uma nova fase, um novo ciclo!
+        <br><br>
+        Miranda Alumínio - A qualidade marca o nosso perfil
+      </p>
+    </div>
 
-        Miranda Alumínio  - A qualidade marca o nosso perfil</p>
+    <!-- Imagem -->
+    <div class="col-md-6 imagem-dev">
+      <img src="fabiosouza.jpg" alt="Foto do Vendedor Fábio Souza">
+    </div>
   </div>
-  <div class="imagem-dev">
-  
-    <img src="fabiosouza.jpg" alt="Foto do Vendedor Fábio Souza">
-  
-  </div>
-
-
 </section>
 
 <!-- Catálogos -->
-<section id="catalogos" class="container mt-5">
+<section id="produtos" class="container mt-5">
+  <h2>Produtos - Setor Industria</h2>
   <!-- Carrosel de imagens -->
   <div class="carousel-container">
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
@@ -195,55 +217,46 @@
   </div>
   <h2>Catálogos</h2>
   <ul class="duas-colunas">
-    <li><a class="cat-prod" href="https://barrachata.netlify.app/" target="_blank" title="Barras-Chatas">Barras Chatas</a></li>
-    <li><a class="cat-prod" href="https://cantoneiras.netlify.app/"target="_blank" title="Cantoneiras">Cantoneiras</a></li>
-    <li><a class="cat-prod" href="https://perfil-u.netlify.app/"target="_blank" title="Perfis em U">Perfis "U"</a></li>
-    <li><a class="cat-prod" href="https://perfil-t.netlify.app/"target="_blank" title="Perfil T">Perfis "T"</a></li>
-    <li><a class="cat-prod" href="https://tubos-redondos.netlify.app/"target="_blank" title="Tubos Redondos">Tubos Redondos</a></li>
-    <li><a class="cat-prod" href="https://tubos-quadrados.netlify.app/"target="_blank" title="Tubos Quadrados">Tubos Quadrados</a></li>
-    <li><a class="cat-prod" href="https://tubos-retangulares.netlify.app/"target="_blank" title="Tubos Retangulares">Tubos Retangulares</a></li>
-    <li><a class="cat-prod" href="https://vergalhaoredondo.netlify.app/"target="_blank" title="Redondo Maciço">Vergalhões Rodondos</a></li>
-    <li><a class="cat-prod" href="https://vergalhaoquadrado.netlify.app/"target="_blank" title="Quadrado Maciço">Vergalhões Quadrados</a></li>
-    <li><a class="cat-prod" href="https://vergalhaosextavado.netlify.app/"target="_blank" title="Sextavado Maciço">Vergalhões Sextavados</a></li>
-    <li><a class="cat-prod" href="https://transp-nautic.netlify.app/"target="_blank" title="Carrocerias e Barcos">Transporte/Náutico</a></li>
-    <li><a class="cat-prod" href="https://cantoneiras.netlify.app/"target="_blank" title="Chapas Lisas e Xadrez">Chapas</a></li>
-    <li><a class="cat-prod" href="https://cantoneiras.netlify.app/"target="_blank" title="Bobinas de Alumínio">Bobinas</a></li>
-    <li><a class="cat-prod" href="https://cantoneiras.netlify.app/"target="_blank" title="Trapezoidal e Ondulada">Telhas</a></li>
-    <li><a class="cat-prod" href="https://drive.google.com/file/d/1AD8ae9Uju9NgCqz3edlmNW2DIuQ6HPPK/view?usp=sharing"target="_blank" title="Construção Civil">Catalogo Geral</a></li>
+    <li><a class="cat-prod" href="https://barrachata.netlify.app/" target="_blank">Barras Chatas</a></li>
+    <li><a class="cat-prod" href="https://cantoneiras.netlify.app/" target="_blank">Cantoneiras</a></li>
+    <li><a class="cat-prod" href="https://perfil-u.netlify.app/" target="_blank">Perfis "U"</a></li>
+    <li><a class="cat-prod" href="https://perfil-t.netlify.app/" target="_blank">Perfis "T"</a></li>
+    <li><a class="cat-prod" href="https://tubos-redondos.netlify.app/" target="_blank">Tubos Redondos</a></li>
+    <li><a class="cat-prod" href="https://tubos-quadrados.netlify.app/" target="_blank">Tubos Quadrados</a></li>
+    <li><a class="cat-prod" href="https://tubos-retangulares.netlify.app/" target="_blank">Tubos Retangulares</a></li>
+    <li><a class="cat-prod" href="https://vergalhaoredondo.netlify.app/" target="_blank">Vergalhões Rodondos</a></li>
+    <li><a class="cat-prod" href="https://vergalhaoquadrado.netlify.app/" target="_blank">Vergalhões Quadrados</a></li>
+    <li><a class="cat-prod" href="https://vergalhaosextavado.netlify.app/" target="_blank">Vergalhões Sextavados</a></li>
+    <li><a class="cat-prod" href="https://transp-nautic.netlify.app/" target="_blank">Transporte/Náutico</a></li>
+    <li><a class="cat-prod" href="https://cantoneiras.netlify.app/" target="_blank">Chapas</a></li>
+    <li><a class="cat-prod" href="https://cantoneiras.netlify.app/" target="_blank">Bobinas</a></li>
+    <li><a class="cat-prod" href="https://cantoneiras.netlify.app/" target="_blank">Telhas</a></li>
+    <li><a class="cat-prod" href="https://drive.google.com/file/d/1AD8ae9Uju9NgCqz3edlmNW2DIuQ6HPPK/view?usp=sharing" target="_blank">Catalogo Geral</a></li>
   </ul>
-
 </section>
 
 <!-- Contato -->
 <section id="contato" class="container mt-5 mb-5">
   <h2>Nosso Endereço</h2>
   <div class="row align-items-center">
-    <!-- Coluna com endereço -->
     <div class="col-md-6">
       <p><strong>Endereço:</strong> Rua Hipólito Henrique Pfleger, 5263 Serraria</p>
       <p><strong>CEP:</strong> 88161-850</p>
       <p><strong>Cidade/UF:</strong> São José - SC</p>
       <p><strong>Email:</strong> 
-        <a href="mailto:vendas.sc1@mirandaaluminio.com.br" title="E-mail">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <a href="mailto:vendas.sc1@mirandaaluminio.com.br"><i class="fas fa-envelope"></i></a>
         vendas.sc1@mirandaaluminio.com.br
       </p>
       <p><strong>Telefone/WhatsApp:</strong> (48) 99944-0582</p>
     </div>
-
-    <!-- Coluna com mapa -->
     <div class="col-md-6 mt-3 mt-md-0">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.8602375268047!2d-48.63163372453867!3d-27.535800876281417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952749004b75ccb5%3A0x22c6a50d2f7b0229!2sMiranda%20Alum%C3%ADnio!5e0!3m2!1spt-BR!2sbr!4v1755825358133!5m2!1spt-BR!2sbr" 
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </div>
 
-  <!-- Formulário + Horário + Redes -->
   <div class="row mt-5">
-    <!-- Coluna esquerda: Formulário -->
     <div class="col-md-6">
       <h4>Envie sua mensagem:</h4>
       <form action="https://formsubmit.co/vendas.sc1@mirandaaluminio.com.br" method="POST">
@@ -266,27 +279,21 @@
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
     </div>
-
-    <!-- Coluna direita: Horário e Redes -->
     <div class="col-md-6 mt-4 mt-md-0">
-      <!-- Horário -->
       <h5>Horário de Atendimento:</h5>
       <p>Segunda à Sexta-feira<br>08:00 às 12:00 e 13:15 às 18:00</p>
-
-      <!-- Redes Sociais -->
       <h5 class="mt-4">Nossas redes sociais:</h5>
       <p>
-        <a href="tel:+5548999440582" class="me-3" title="Telefone"><i class="fas fa-phone fa-lg"></i></a>
-        <a href="https://www.instagram.com/fabiosouza.mirandaaluminiosc/" target="_blank" class="me-3" title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="https://www.facebook.com/fabio.souza.898930" target="_blank" class="me-3" title="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
-        <a href="https://www.linkedin.com/in/fabiohrsouza/" target="_blank" class="me-3" title="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
-        <a href="https://wa.me/+5548999440582" target="_blank" class="me-3" title="WhatsApp"><i class="fab fa-whatsapp fa-lg"></i></a>
-        <a href="https://maps.app.goo.gl/u97suLoUfDDxdszCA" target="_blank" class="me-3" title="Endereço"><i class="fas fa-map-marker-alt fa-lg"></i></a>
+        <a href="tel:+5548999440582" class="me-3"><i class="fas fa-phone fa-lg"></i></a>
+        <a href="https://www.instagram.com/fabiosouza.mirandaaluminiosc/" target="_blank" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://www.facebook.com/fabio.souza.898930" target="_blank" class="me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+        <a href="https://www.linkedin.com/in/fabiohrsouza/" target="_blank" class="me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+        <a href="https://wa.me/+5548999440582" target="_blank" class="me-3"><i class="fab fa-whatsapp fa-lg"></i></a>
+        <a href="https://maps.app.goo.gl/u97suLoUfDDxdszCA" target="_blank" class="me-3"><i class="fas fa-map-marker-alt fa-lg"></i></a>
       </p>
     </div>
   </div>
 </section>
-
 
 <!-- Rodapé -->
 <footer>
@@ -304,18 +311,6 @@
       }
     });
   });
-
-  // Muda a cor da navbar ao rolar a página
- /* window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.add('navbar-light-scrolled', 'navbar-light');
-      navbar.classList.remove('navbar-dark', 'bg-dark');
-    } else {
-      navbar.classList.remove('navbar-light-scrolled', 'navbar-light');
-      navbar.classList.add('navbar-dark', 'bg-dark');
-    }
-  }); /*
 </script>
 </body>
 </html>
