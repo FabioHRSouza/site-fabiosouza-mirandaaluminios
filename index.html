@@ -64,16 +64,22 @@
   }
   
   .imagem-inicio {
-    width: 90%;
+    /*width: 90%;
     margin: 0 auto;
-    height: auto;
+    height: auto;*/
+    width: 100vw; /* Ocupa 100% da largura da viewport */
+    height: 100vh; /* Ocupa 100% da altura da viewport */
+    overflow: hidden;
   }
   .imagem-inicio img {
-    width: 90%;
+    /* width: 90%;
     height: auto;
     max-width: 90%;
     object-fit: cover;
-    display: block;
+    display: block;*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Redimensiona a imagem para cobrir o contêiner, mantendo a proporção */
   }
 
   /*Lista de Links em 2 colunas */
