@@ -43,59 +43,49 @@
   <!-- Navbar fixa -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#inicio">Miranda Alumínio SC</a>
+      <a class="navbar-brand" href="https://fabiosouza.netlify.app/">Fábio Souza</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#catalogos">Catálogos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-        </ul>
-      </div>
+      <div class="collapse navbar-collapse" id="menu"> 
+        <ul class="navbar-nav ms-auto"> 
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Início</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#produtos">Produtos</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li> 
+        </ul> 
+        <div class="main-header-cta"> 
+          <a href="https://wa.me/5548999440582" class="btn btn-primary" target="_blank"> 
+            <span><img src="./icons/cart.svg" alt="">Faça sua Cotação</span> 
+          </a>
+        </div>
+      </div>    
     </div>
   </nav>
 
   <!-- Início -->
   <section id="inicio" class="pt-5 mt-5 text-center">
-    <div class="container">
-      <h1>Bem-vindo à Miranda Alumínio SC</h1>
-      <p>Qualidade que marca o nosso perfil</p>
-    </div>
-  </section>
-
-  <!-- Carrossel -->
-  <section class="container my-5">
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="banner1.jpg" class="d-block w-100" alt="Banner 1">
-        </div>
-        <div class="carousel-item">
-          <img src="banner2.jpg" class="d-block w-100" alt="Banner 2">
-        </div>
-        <div class="carousel-item">
-          <img src="banner3.jpg" class="d-block w-100" alt="Banner 3">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
+    <div class="imagem-inicio"> 
+      <img src="miranda-sc.jpg" 
+      alt="Foto da fachada da Miranda Aluminio Santa Catarina"> 
+    </div> 
   </section>
 
   <!-- Sobre -->
   <section id="sobre" class="container mt-5">
     <div class="row align-items-center">
       <div class="col-md-6 texto-sobre">
-        <h2>Miranda Alumínio Santa Catarina - Comercial Indústria</h2>
+        <h2>Miranda Alumínio Santa Catarina<br>Comercial Indústria</h2>
         <p>
-          A página da Miranda Alumínio Santa Catarina foi desenvolvida pelo Vendedor Fábio Souza,
+          <br>A página da Miranda Alumínio Santa Catarina foi desenvolvida pelo Vendedor Fábio Souza,
           como uma ferramenta de suporte aos produtos comercializados, oferecendo informações e
           recursos para clientes e parceiros do segmento industrial. Integrante do Grupo LGM, que
           reúne diversas empresas ligadas ao ramo do alumínio, a Miranda Alumínio fortalece sua
@@ -109,56 +99,20 @@
           Miranda Alumínio - A qualidade marca o nosso perfil
         </p>
       </div>
+      <!-- imagem do desenvolvedor -->
       <div class="col-md-6 imagem-dev">
         <img src="fabiosouza.jpg" alt="Foto do Vendedor Fábio Souza">
       </div>
     </div>
   </section>
 
-  <!-- Contato -->
-  <section id="contato" class="container my-5">
-    <div class="row">
-      <!-- Formulário -->
-      <div class="col-md-6 mb-4">
-        <h3>Entre em Contato</h3>
-        <form>
-          <div class="mb-3">
-            <label class="form-label">Nome</label>
-            <input type="text" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">E-mail</label>
-            <input type="email" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Mensagem</label>
-            <textarea class="form-control" rows="4" required></textarea>
-          </div>
-          <button class="btn btn-primary" type="submit">Enviar</button>
-        </form>
-      </div>
+  <!-- Catálogos --> <section id="produtos" class="container mt-5"> <h2>Produtos - Setor Industria</h2> <!-- Carrosel de imagens --> <div class="carousel-container"> <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"> <div class="carousel-inner"> <div class="carousel-item active"> <img src="bobina_sliter.png" class="d-block w-100" alt="Imagem 1"/> </div> <div class="carousel-item"> <img src="chapa_lisa_xadrez.png" class="d-block w-100" alt="Imagem 2"/> </div> <div class="carousel-item"> <img src="telha_trapez.png" class="d-block w-100" alt="Imagem 3"/> </div><div class="carousel-item"> <img src="story_01.jpg" class="d-block w-100" alt="Imagem 4"/> </div> </div> <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"> <span class="carousel-control-prev-icon"></span> </button> <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"> <span class="carousel-control-next-icon"></span> </button> </div> </div> <h2>Catálogos</h2> <ul class="duas-colunas"> <li><a class="cat-prod" href="https://barrachata.netlify.app/" target="_blank">Barras Chatas</a></li><li><a class="cat-prod" href="https://cantoneiras.netlify.app/" target="_blank">Cantoneiras</a></li> <li><a class="cat-prod" href="https://perfil-u.netlify.app/" target="_blank">Perfis "U"</a></li> <li><a class="cat-prod" href="https://perfil-t.netlify.app/" target="_blank">Perfis "T"</a></li> <li><a class="cat-prod" href="https://tubos-redondos.netlify.app/" target="_blank">Tubos Redondos</a></li> <li><a class="cat-prod" href="https://tubos-quadrados.netlify.app/" target="_blank">Tubos Quadrados</a></li> <li><a class="cat-prod" href="https://tubos-retangulares.netlify.app/" target="_blank">Tubos Retangulares</a></li> <li><a class="cat-prod" href="https://vergalhaoredondo.netlify.app/" target="_blank">Vergalhões Rodondos</a></li> <li><a class="cat-prod" href="https://vergalhaoquadrado.netlify.app/" target="_blank">Vergalhões Quadrados</a></li><li><a class="cat-prod" href="https://vergalhaosextavado.netlify.app/" target="_blank">Vergalhões Sextavados</a></li> <li><a class="cat-prod" href="https://transp-nautic.netlify.app/" target="_blank">Transporte/Náutico</a></li> <li><a class="cat-prod" href="https://cantoneiras.netlify.app/" target="_blank">Chapas</a></li> <li><a class="cat-prod" href="https://cantoneiras.netlify.app/" target="_blank">Bobinas</a></li> <li><a class="cat-prod" href="https://cantoneiras.netlify.app/" target="_blank">Telhas</a></li> <li><a class="cat-prod" href="https://drive.google.com/file/d/1AD8ae9Uju9NgCqz3edlmNW2DIuQ6HPPK/view?usp=sharing" target="_blank">Catalogo Geral</a></li> </ul> </section>
 
-      <!-- Horário + Redes sociais -->
-      <div class="col-md-6">
-        <h3>Horário de Atendimento</h3>
-        <p>Segunda a Sexta: 8h às 18h</p>
-        <p>Sábado: 8h às 12h</p>
+  
 
-        <h3>Siga-nos</h3>
-        <ul class="list-unstyled">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">LinkedIn</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+ <!-- Contato --> <section id="contato" class="container mt-5 mb-5"> <h2>Nosso Endereço</h2> <div class="row align-items-center"> <div style="padding-left: 50px;" class="col-md-6"> <p><strong>Endereço:</strong> Rua Hipólito Henrique Pfleger, 5263 Serraria</p> <p><strong>CEP:</strong> 88161-850</p> <p><strong>Cidade/UF:</strong> São José - SC</p> <p><strong>Email:</strong> <a href="mailto:vendas.sc1@mirandaaluminio.com.br"><i class="fas fa-envelope"></i></a> vendas.sc1@mirandaaluminio.com.br </p> <p><strong>Telefone/WhatsApp:</strong> (48) 99944-0582</p> </div> <div class="col-md-6 mt-3 mt-md-0"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.8602375268047!2d-48.63163372453867!3d-27.535800876281417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952749004b75ccb5%3A0x22c6a50d2f7b0229!2sMiranda%20Alum%C3%ADnio!5e0!3m2!1spt-BR!2sbr!4v1755825358133!5m2!1spt-BR!2sbr" width="90%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> </div> </div> <div class="row mt-5"> <div class="col-md-6"> <h4>Envie sua mensagem:</h4> <form action="https://formsubmit.co/vendas.sc1@mirandaaluminio.com.br" method="POST"> <div class="mb-3"> <label class="form-label">Nome</label> <input type="text" name="nome" class="form-control" required> </div> <div class="mb-3"> <label class="form-label">Email</label> <input type="email" name="email" class="form-control" required> </div> <div class="mb-3"> <label class="form-label">WhatsApp</label> <input type="text" name="whatsapp" class="form-control"> </div> <div class="mb-3"> <label class="form-label">Mensagem</label> <textarea name="mensagem" class="form-control" rows="4" required></textarea> </div> <button type="submit" class="btn btn-primary">Enviar</button> </form> </div> <div style="text-align: center; " class="col-md-6 mt-4 mt-md-0"> <h5>Horário de Atendimento:</h5> <p>Segunda à Sexta-feira<br>08:00 às 12:00 e 13:15 às 18:00</p> <h5 class="mt-4">Nossas redes sociais:</h5> <p style="text-align: center; font-size: 50px;"> <a href="tel:+5548999440582" class="me-3"><i class="fas fa-phone fa-lg"></i></a> <a href="https://www.instagram.com/fabiosouza.mirandaaluminiosc/" target="_blank" class="me-3"><i class="fab fa-instagram fa-lg"></i></a> <a href="https://www.facebook.com/fabio.souza.898930" target="_blank" class="me-3"><i class="fab fa-facebook-f fa-lg"></i></a> <a href="https://www.linkedin.com/in/fabiohrsouza/" target="_blank" class="me-3"><i class="fab fa-linkedin-in fa-lg"></i></a> <a href="https://wa.me/+5548999440582" target="_blank" class="me-3"><i class="fab fa-whatsapp fa-lg"></i></a> <a href="https://maps.app.goo.gl/u97suLoUfDDxdszCA" target="_blank" class="me-3"><i class="fas fa-map-marker-alt fa-lg"></i></a> </p> </div> </div> </section>
+
+      
 
   <!-- Rodapé fixo -->
-  <footer class="bg-dark text-white text-center p-3 fixed-bottom">
-    <p class="mb-0">© 2024 Miranda Alumínio SC - Todos os direitos reservados</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  <!-- Rodapé --> <footer> &copy; 2025 Fábio Souza - Todos os direitos reservados </footer> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> <script> // Fecha o menu mobile automaticamente ao clicar em um link document.querySelectorAll('.navbar-nav .nav-link').forEach(link => { link.addEventListener('click', () => { const menu = document.querySelector('.navbar-collapse'); if (menu.classList.contains('show')) { new bootstrap.Collapse(menu).toggle(); } });}); </script> </body> </html>

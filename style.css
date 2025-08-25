@@ -1,49 +1,19 @@
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
+/* Scroll suave */ 
+html { scroll-behavior: smooth; } 
+h2 { text-align: center; } 
+body { 
+    padding-top: 80px; /* altura da navbar fixa */ 
+    padding-bottom: 60px; /* altura do rodapé fixo */ 
 }
 
-/* Espaço para navbar fixa */
-body {
-  padding-top: 70px;
-}
+/* Navbar fixa */ 
+.navbar { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1030; 
+    transition: background-color 0.3s ease, 
+    box-shadow 0.3s ease; 
+} 
 
-/* Sobre - texto justificado */
-#sobre p {
-  text-align: justify;
-}
-
-/* Imagem seção Sobre */
-.imagem-dev img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Mobile: imagem acima do texto */
-@media (max-width: 768px) {
-  #sobre .row {
-    flex-direction: column;
-  }
-
-  .imagem-dev img {
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-}
-
-/* Formulário e redes sociais */
-#contato h3 {
-  margin-top: 20px;
-}
-
-#contato ul li a {
-  text-decoration: none;
-  color: #0d6efd;
-}
-
-#contato ul li a:hover {
-  text-decoration: underline;
-}
+.main-header-cta { display: flex; align-items: center; justify-content: space-between; gap: 1.6rem; } img { display: block; max-width: 100%; } /* Navbar clara */ .navbar-light-scrolled { background-color: #fff !important; box-shadow: 0 2px 5px rgba(0,0,0,0.1); } .navbar-light-scrolled .nav-link { color: #000 !important; } .navbar-light-scrolled .navbar-brand { color: #000 !important; } /* Menu mobile visível */ @media (max-width: 991px) { .navbar-collapse { background: #fff; padding: 10px; } .navbar-collapse .nav-link { color: #000 !important; } } .imagem-inicio { width: 100%; margin: 0 auto; height: auto; } .imagem-inicio img { width: 100%; height: auto; max-width: 90%; object-fit: cover; display: block; } /*Lista de Links em 2 colunas */ .duas-colunas { column-count: 2; -webkit-column-count: 2; -moz-column-count: 2; padding-left: 15px; padding-right: 15px; } /* Carrossel responsivo */ .carousel-container { max-width: 800px; margin: auto; border-radius: 10px; overflow: hidden; } .carousel-item img { height: 400px; object-fit: cover; } /* Rodapé fixo */ footer { position: fixed; bottom: 0; width: 100%; background: #212529; color: white; text-align: center; padding: 8px; } /* -------- Ajustes seção SOBRE -------- */ #sobre p { text-align: justify; font-size: 16px; } .imagem-dev img { width: 70%; height: 70%; object-fit: cover; } @media (max-width: 768px) { #sobre .row { flex-direction: column; } .imagem-dev img { width: 60%; height: 60vh; object-fit: cover; margin-bottom: 20px; } }
