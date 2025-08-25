@@ -1,45 +1,26 @@
-/* Ajustes gerais */
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Espaço para navbar fixa */
 body {
-  padding-top: 70px;  /* Espaço para a navbar fixa */
-  padding-bottom: 70px; /* Espaço para o rodapé fixo */
-  scroll-behavior: smooth; /* Scroll suave */
+  padding-top: 70px;
 }
 
-/* Navbar fixa */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-/* Rodapé fixo */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-/* Carrossel */
-.carousel-item img {
-  width: 100%;
-  height: 70vh;
-  object-fit: cover;
-}
-
-/* Sessão Sobre */
+/* Sobre - texto justificado */
 #sobre p {
   text-align: justify;
 }
 
+/* Imagem seção Sobre */
 .imagem-dev img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Mobile - Sobre */
+/* Mobile: imagem acima do texto */
 @media (max-width: 768px) {
   #sobre .row {
     flex-direction: column;
@@ -53,20 +34,16 @@ footer {
   }
 }
 
-/* Contato: formulário e informações */
-#contato .row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+/* Formulário e redes sociais */
+#contato h3 {
+  margin-top: 20px;
 }
 
-#contato .col-md-6 {
-  flex: 1;
+#contato ul li a {
+  text-decoration: none;
+  color: #0d6efd;
 }
 
-/* Mobile - Contato */
-@media (max-width: 768px) {
-  #contato .row {
-    flex-direction: column;
-  }
+#contato ul li a:hover {
+  text-decoration: underline;
 }

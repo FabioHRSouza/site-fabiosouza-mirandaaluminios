@@ -3,20 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miranda Alumínio SC</title>
+  <title>Miranda Alumínio SC - Indústria e Comercial</title>
+
+  <!-- Descrição SEO -->
+  <meta name="description" content="Miranda Alumínio Santa Catarina - Empresa do Grupo LGM, referência em perfis e soluções em alumínio para o setor industrial. A qualidade marca o nosso perfil.">
+
+  <!-- Palavras-chave SEO -->
+  <meta name="keywords" content="alumínio, perfis de alumínio, indústria, Santa Catarina, Grupo LGM, Miranda Alumínio, catálogos de alumínio">
+
+  <!-- Autor -->
+  <meta name="author" content="Miranda Alumínio SC - Grupo LGM">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Miranda Alumínio SC - Indústria e Comercial">
+  <meta property="og:description" content="Empresa do Grupo LGM, referência em perfis e soluções em alumínio. Qualidade e confiança há mais de 27 anos.">
+  <meta property="og:image" content="https://seusite.com/banner1.jpg"> <!-- Trocar -->
+  <meta property="og:url" content="https://seusite.com">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Miranda Alumínio SC - Indústria e Comercial">
+  <meta name="twitter:description" content="Referência em perfis e soluções em alumínio no setor industrial. Grupo LGM.">
+  <meta name="twitter:image" content="https://seusite.com/banner1.jpg"> <!-- Trocar -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS separado -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Navbar fixa -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#inicio">Miranda Alumínio SC</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="menuNavbar">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
@@ -27,9 +58,17 @@
     </div>
   </nav>
 
-  <!-- Início / Carrossel -->
-  <section id="inicio" class="container mt-4">
-    <div id="carouselExemplo" class="carousel slide" data-bs-ride="carousel">
+  <!-- Início -->
+  <section id="inicio" class="pt-5 mt-5 text-center">
+    <div class="container">
+      <h1>Bem-vindo à Miranda Alumínio SC</h1>
+      <p>Qualidade que marca o nosso perfil</p>
+    </div>
+  </section>
+
+  <!-- Carrossel -->
+  <section class="container my-5">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="banner1.jpg" class="d-block w-100" alt="Banner 1">
@@ -41,10 +80,10 @@
           <img src="banner3.jpg" class="d-block w-100" alt="Banner 3">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExemplo" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExemplo" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
@@ -53,17 +92,16 @@
   <!-- Sobre -->
   <section id="sobre" class="container mt-5">
     <div class="row align-items-center">
-      <!-- Texto -->
       <div class="col-md-6 texto-sobre">
         <h2>Miranda Alumínio Santa Catarina - Comercial Indústria</h2>
         <p>
-          A página da Miranda Alumínio Santa Catarina foi desenvolvida pelo Vendedor Fábio Souza, 
-          como uma ferramenta de suporte aos produtos comercializados, oferecendo informações e 
-          recursos para clientes e parceiros do segmento industrial. Integrante do Grupo LGM, que 
-          reúne diversas empresas ligadas ao ramo do alumínio, a Miranda Alumínio fortalece sua 
+          A página da Miranda Alumínio Santa Catarina foi desenvolvida pelo Vendedor Fábio Souza,
+          como uma ferramenta de suporte aos produtos comercializados, oferecendo informações e
+          recursos para clientes e parceiros do segmento industrial. Integrante do Grupo LGM, que
+          reúne diversas empresas ligadas ao ramo do alumínio, a Miranda Alumínio fortalece sua
           presença no mercado, sempre comprometida com qualidade e confiança.
           <br><br>
-          Para a Miranda Alumínio, a satisfação dos nossos clientes sempre foi prioridade. 
+          Para a Miranda Alumínio, a satisfação dos nossos clientes sempre foi prioridade.
           Por isso, nesses últimos 27 anos, a inovação sempre esteve presente.
           <br><br>
           A Miranda Alumínio vive um novo momento! Uma nova fase, um novo ciclo!
@@ -71,60 +109,54 @@
           Miranda Alumínio - A qualidade marca o nosso perfil
         </p>
       </div>
-      <!-- Imagem -->
       <div class="col-md-6 imagem-dev">
         <img src="fabiosouza.jpg" alt="Foto do Vendedor Fábio Souza">
       </div>
     </div>
   </section>
 
-  <!-- Catálogos -->
-  <section id="catalogos" class="container mt-5">
-    <h2>Catálogos</h2>
-    <p>Aqui você encontrará os catálogos de produtos disponíveis.</p>
-  </section>
-
   <!-- Contato -->
-  <section id="contato" class="container mt-5">
-    <h2>Contato</h2>
+  <section id="contato" class="container my-5">
     <div class="row">
       <!-- Formulário -->
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4">
+        <h3>Entre em Contato</h3>
         <form>
           <div class="mb-3">
-            <label for="nome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-control" required>
           </div>
           <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email" placeholder="Seu e-mail">
+            <label class="form-label">E-mail</label>
+            <input type="email" class="form-control" required>
           </div>
           <div class="mb-3">
-            <label for="mensagem" class="form-label">Mensagem</label>
-            <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
+            <label class="form-label">Mensagem</label>
+            <textarea class="form-control" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button class="btn btn-primary" type="submit">Enviar</button>
         </form>
       </div>
 
-      <!-- Informações -->
+      <!-- Horário + Redes sociais -->
       <div class="col-md-6">
-        <h5>Horário de Atendimento</h5>
-        <p>Segunda a Sexta: 08h - 18h<br>Sábado: 08h - 12h</p>
-        
-        <h5>Redes Sociais</h5>
-        <p>
-          <a href="#">Facebook</a><br>
-          <a href="#">Instagram</a><br>
-          <a href="#">LinkedIn</a>
-        </p>
+        <h3>Horário de Atendimento</h3>
+        <p>Segunda a Sexta: 8h às 18h</p>
+        <p>Sábado: 8h às 12h</p>
+
+        <h3>Siga-nos</h3>
+        <ul class="list-unstyled">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer class="bg-dark text-white text-center p-3">
-    <p class="mb-0">© 2024 Miranda Alumínio SC - Todos os direitos reservados.</p>
+  <!-- Rodapé fixo -->
+  <footer class="bg-dark text-white text-center p-3 fixed-bottom">
+    <p class="mb-0">© 2024 Miranda Alumínio SC - Todos os direitos reservados</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
