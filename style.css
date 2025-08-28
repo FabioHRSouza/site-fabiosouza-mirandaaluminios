@@ -26,7 +26,113 @@ body {
   color: #0d6efd; /* muda a cor ao passar o mouse (opcional) */
 }
 
-.main-header-cta { display: flex; align-items: center; justify-content: space-between; gap: 1.6rem; } img { display: block; max-width: 100%; } /* Navbar clara */ .navbar-light-scrolled { background-color: #fff !important; box-shadow: 0 2px 5px rgba(0,0,0,0.1); } .navbar-light-scrolled .nav-link { color: #000 !important; } .navbar-light-scrolled .navbar-brand { color: #000 !important; } /* Menu mobile visível */ @media (max-width: 991px) { .navbar-collapse { background: #fff; padding: 10px; } .navbar-collapse .nav-link { color: #000 !important; } } .imagem-inicio { width: 100%; margin: 0 auto; height: auto; } .imagem-inicio img { width: 100%; height: auto; max-width: 90%; object-fit: cover; display: block; } /*Lista de Links em 2 colunas */ .duas-colunas { column-count: 2; -webkit-column-count: 2; -moz-column-count: 2; padding-left: 15px; padding-right: 15px; } /* Carrossel responsivo */ .carousel-container { max-width: 800px; margin: auto; border-radius: 10px; overflow: hidden; } .carousel-item img { height: 400px; object-fit: cover; } /* Rodapé fixo */ footer { position: fixed; bottom: 0; width: 100%; background: #212529; color: white; text-align: center; padding: 8px; } /* -------- Ajustes seção SOBRE -------- */ #sobre p { text-align: justify; font-size: 16px; } .imagem-dev img { width: 70%; height: 70%; object-fit: cover; } @media (max-width: 768px) { #sobre .row { flex-direction: column; } .imagem-dev img { width: 60%; height: 60vh; object-fit: cover; margin-bottom: 20px; } }
+.main-header-cta { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 1.6rem; 
+} 
+
+img { 
+  display: block; 
+  max-width: 100%; 
+} 
+
+/* Navbar clara */ 
+.navbar-light-scrolled { 
+  background-color: #fff !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+} 
+
+.navbar-light-scrolled .nav-link { 
+  color: #000 !important; 
+} 
+
+.navbar-light-scrolled .navbar-brand { 
+  color: #000 !important; 
+} 
+
+/* Menu mobile visível */ 
+@media (max-width: 991px) { 
+  .navbar-collapse { 
+    background: #fff; 
+    padding: 10px; 
+  } 
+  .navbar-collapse .nav-link { 
+    color: #000 !important; 
+  } 
+} 
+
+.imagem-inicio { 
+  width: 100%; 
+  margin: 0 auto; 
+  height: auto; 
+} 
+
+.imagem-inicio img { 
+  width: 100%; 
+  height: auto; 
+  max-width: 90%; 
+  object-fit: cover; 
+  display: block; 
+} 
+
+/*Lista de Links em 2 colunas */ 
+.duas-colunas { 
+  column-count: 2; 
+  -webkit-column-count: 2; 
+  -moz-column-count: 2; 
+  padding-left: 15px; 
+  padding-right: 15px; 
+} 
+
+/* Carrossel responsivo */ 
+.carousel-container { 
+  max-width: 800px; 
+  margin: auto; 
+  border-radius: 10px; 
+  overflow: hidden; 
+} 
+
+.carousel-item img { 
+  height: 400px; 
+  object-fit: cover; 
+} 
+
+/* Rodapé fixo */ 
+footer { 
+  position: fixed; 
+  bottom: 0; 
+  width: 100%; 
+  background: #212529; 
+  color: white; 
+  text-align: center; 
+  padding: 8px; 
+} 
+
+/* -------- Ajustes seção SOBRE -------- */ 
+#sobre p { 
+  text-align: justify; 
+  font-size: 16px; 
+} 
+
+.imagem-dev img { 
+  width: 70%; 
+  height: 70%; 
+  object-fit: cover; 
+} 
+
+@media (max-width: 768px) { 
+  #sobre .row { 
+    flex-direction: column; 
+  } 
+  .imagem-dev img { 
+    width: 60%; 
+    height: 60vh; 
+    object-fit: cover; 
+    margin-bottom: 20px; 
+  } 
+}
 
 
 .whatsapp-float:hover {
