@@ -71,7 +71,7 @@ img {
 } 
 
 #inicio {
-  padding-top: 80px; /* ajuste conforme altura do menu fixo */
+  padding-top: 70px; /* ajuste conforme altura do menu fixo */
   text-align: center;
 }
 
@@ -114,7 +114,7 @@ img {
 .duas-colunas a {
   text-decoration: none;
   font-weight: 500;
-  color: #000;
+  color: blue;
 }
 
 /* Ajuste específico para telas menores */
@@ -154,22 +154,23 @@ footer {
   font-size: 16px; 
 } 
 
-.imagem-dev img { 
+/*.imagem-dev img { 
   width: 70%; 
   height: 70%; 
   object-fit: cover; 
-} 
+} */
 
 @media (max-width: 768px) { 
   #sobre .row { 
     flex-direction: column; 
   } 
-  .imagem-dev img { 
+
+  /*.imagem-dev img { 
     width: 60%; 
     height: 60vh; 
     object-fit: cover; 
     margin-bottom: 20px; 
-  } 
+  } */
 }
 
 
