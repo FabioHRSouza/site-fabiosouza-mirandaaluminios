@@ -70,6 +70,11 @@ img {
   } 
 } 
 
+#inicio {
+  padding-top: 80px; /* ajuste conforme altura do menu fixo */
+  text-align: center;
+}
+
 .imagem-inicio { 
   width: 100%; 
   margin: 0 auto; 
@@ -91,14 +96,33 @@ img {
   height: auto;
 }
 
-/*Lista de Links em 2 colunas */ 
-.duas-colunas { 
-  column-count: 2; 
-  -webkit-column-count: 2; 
-  -moz-column-count: 2; 
-  padding-left: 15px; 
-  padding-right: 15px; 
-} 
+.duas-colunas {
+  list-style: none;       
+  padding: 0;
+  margin: 30px auto;      
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr)); /* sempre 2 colunas */
+  gap: 15px 40px;         
+  justify-content: center;
+  text-align: center;
+}
+
+.duas-colunas li {
+  margin: 5px 0;
+}
+
+.duas-colunas a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Ajuste específico para telas menores */
+@media (max-width: 576px) {
+  .duas-colunas {
+    gap: 10px 20px;       /* diminui o espaço no celular */
+  }
+}
 
 /* Carrossel responsivo */ 
 .carousel-container { 
