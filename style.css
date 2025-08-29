@@ -82,7 +82,14 @@ img {
   max-width: 90%; 
   object-fit: cover; 
   display: block; 
-} 
+}
+
+.imagem-inicio img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;   /* garante que não estoure no celular */
+  height: auto;
+}
 
 /*Lista de Links em 2 colunas */ 
 .duas-colunas { 
@@ -182,4 +189,24 @@ footer {
 
   /* Animação que repete a cada 5s */
   animation: shake 5s infinite;
+}
+
+/* Adiciona um espaçamento lateral quando em telas grandes */
+@media (min-width: 992px) {
+  .imagem-dev {
+    padding-left: 40px;  /* ajuste conforme gostar */
+  }
+}
+
+/* Centraliza no celular */
+@media (max-width: 991px) {
+  .imagem-dev {
+    text-align: center;
+    margin-top: 20px; /* espaço extra abaixo do texto */
+  }
+
+  .imagem-dev img {
+    max-width: 80%;  /* evita ocupar 100% no celular */
+    height: auto;
+  }
 }
