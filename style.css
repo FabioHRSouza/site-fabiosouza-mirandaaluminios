@@ -1,6 +1,13 @@
 /* Scroll suave */ 
-html { scroll-behavior: smooth; } 
-h2 { text-align: center; } 
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 70px; /*ajusta conforme a altura do navbar */
+} 
+
+h2 { 
+  text-align: center; 
+}
+
 body { 
     padding-top: 80px; /* altura da navbar fixa */ 
     padding-bottom: 60px; /* altura do rodapé fixo */ 
