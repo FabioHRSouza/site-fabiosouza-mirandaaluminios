@@ -233,12 +233,189 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <!-- Banner de Cookies -->
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    Utilizamos cookies para melhorar sua experiência em nosso site, analisar o tráfego e personalizar conteúdo.  
+    Saiba mais em nossa <a href="/politica-de-privacidade" target="_blank">Política de Privacidade</a>.
+  </p>
+  <div class="cookie-buttons">
+    <button id="accept-all">Aceitar Todos</button>
+    <button id="open-preferences">Configurações</button>
+  </div>
+</div>
+
+<!-- Modal de Preferências -->
+<div id="cookie-modal" class="cookie-modal">
+  <div class="cookie-modal-content">
+    <h2>Preferências de Cookies</h2>
+    <p>Escolha quais tipos de cookies deseja autorizar. Você pode alterar sua escolha a qualquer momento.</p>
+
+    <label>
+      <input type="checkbox" checked disabled>
+      <strong>Essenciais</strong> (necessários para o funcionamento do site)
+    </label>
+
+    <label>
+      <input type="checkbox" id="cookies-analytics">
+      <strong>Estatísticos</strong> (Google Analytics, relatórios de uso)
+    </label>
+
+    <label>
+      <input type="checkbox" id="cookies-marketing">
+      <strong>Marketing</strong> (Pixel do Facebook e anúncios)
+    </label>
+
+    <label>
+      <input type="checkbox" id="cookies-chat">
+      <strong>Chat</strong> (atendimento online)
+    </label>
+
+    <div class="cookie-buttons">
+      <button id="save-preferences">Salvar Preferências</button>
+      <button id="accept-all-2">Aceitar Todos</button>
+    </div>
+  </div>
+</div>
+
+<!-- Botão de Preferências -->
+<button id="cookie-preferences" class="cookie-preferences" title="Configurações de Cookies">⚙️</button>
+
+
   <!-- Rodapé fixo -->
   <!-- Rodapé --> 
    <footer> &copy; 2025 Fábio Souza - Todos os direitos reservados </footer> 
    
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script> 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+   <script> 
    // Fecha o menu mobile automaticamente ao clicar em um link // 
-   document.querySelectorAll('.navbar-nav .nav-link').forEach(link => { link.addEventListener('click', () => { const menu = document.querySelector('.navbar-collapse'); if (menu.classList.contains('show')) { new bootstrap.Collapse(menu).toggle(); } });}); </script> 
+   document.querySelectorAll('.navbar-nav .nav-link').forEach(link => { link.addEventListener('click', () => { const menu = document.querySelector('.navbar-collapse'); if (menu.classList.contains('show')) { new bootstrap.Collapse(menu).toggle(); } });});
+    document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const modal = document.getElementById("cookie-modal");
+    const prefBtn = document.getElementById("cookie-preferences");
+
+    const acceptAllBtn = document.getElementById("accept-all");
+    const acceptAllBtn2 = document.getElementById("accept-all-2");
+    const openPrefBtn = document.getElementById("open-preferences");
+    const savePrefBtn = document.getElementById("save-preferences");
+
+    const analyticsChk = document.getElementById("cookies-analytics");
+    const marketingChk = document.getElementById("cookies-marketing");
+    const chatChk = document.getElementById("cookies-chat");
+
+    const consent = JSON.parse(localStorage.getItem("cookieConsent"));
+
+    if (!consent) {
+      banner.style.display = "flex";
+    } else {
+      applyPreferences(consent);
+    }
+
+    // Aceitar todos direto
+    acceptAllBtn.addEventListener("click", () => {
+      savePreferences({analytics: true, marketing: true, chat: true});
+    });
+    acceptAllBtn2.addEventListener("click", () => {
+      savePreferences({analytics: true, marketing: true, chat: true});
+    });
+
+    // Abrir configurações
+    openPrefBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+      banner.style.display = "none";
+      if (consent) {
+        analyticsChk.checked = consent.analytics;
+        marketingChk.checked = consent.marketing;
+        chatChk.checked = consent.chat;
+      }
+    });
+
+    // Salvar preferências
+    savePrefBtn.addEventListener("click", () => {
+      savePreferences({
+        analytics: analyticsChk.checked,
+        marketing: marketingChk.checked,
+        chat: chatChk.checked
+      });
+    });
+
+    // Reabrir pelo botão ⚙️
+    prefBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+      if (consent) {
+        analyticsChk.checked = consent.analytics;
+        marketingChk.checked = consent.marketing;
+        chatChk.checked = consent.chat;
+      }
+    });
+
+    // Função salvar
+    function savePreferences(prefs) {
+      localStorage.setItem("cookieConsent", JSON.stringify(prefs));
+      modal.style.display = "none";
+      banner.style.display = "none";
+      applyPreferences(prefs);
+    }
+
+    // Função aplicar scripts
+    function applyPreferences(prefs) {
+      if (prefs.analytics) loadAnalytics();
+      if (prefs.marketing) loadFacebookPixel();
+      if (prefs.chat) loadChat();
+    }
+
+    // ===== Scripts opcionais =====
+    function loadAnalytics() {
+      const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // Troque pelo seu ID
+      if (GA_MEASUREMENT_ID !== "G-XXXXXXXXXX") {
+        const gaScript = document.createElement("script");
+        gaScript.async = true;
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+        document.head.appendChild(gaScript);
+
+        const gaConfig = document.createElement("script");
+        gaConfig.innerHTML = `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');
+        `;
+        document.head.appendChild(gaConfig);
+      }
+    }
+
+    function loadFacebookPixel() {
+      const FB_PIXEL_ID = ""; // Cole o ID do Pixel
+      if (FB_PIXEL_ID) {
+        const fbScript = document.createElement("script");
+        fbScript.innerHTML = `
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '${FB_PIXEL_ID}');
+          fbq('track', 'PageView');
+        `;
+        document.head.appendChild(fbScript);
+      }
+    }
+
+    function loadChat() {
+      const CHAT_SCRIPT_URL = ""; // Cole a URL do script do chat
+      if (CHAT_SCRIPT_URL) {
+        const chatScript = document.createElement("script");
+        chatScript.async = true;
+        chatScript.src = CHAT_SCRIPT_URL;
+        document.body.appendChild(chatScript);
+      }
+    }
+  });
+    </script> 
 </body> 
 </html>
